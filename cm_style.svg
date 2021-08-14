@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1000mm" height="1000mm" viewBox="0 0 1000 1000">
+    <text x="50" y="100" font-family="Minecraft" font-size="50px" fill="#202020">
+        chrissx Media
+        <text font-family="Unifont">Corporate Style 2.2rc0</text>
+    </text>
+    <text x="50" y="200" font-family="Unifont" font-size="50px" fill="#202020">Fonts:</text>
+    <text x="200" y="250" font-family="Unifont" font-size="50px" fill="#202020">GNU Unifont</text>
+    <text x="200" y="300" font-family="Minecraft" font-size="50px" fill="#202020">Minecraft</text>
+    <text x="50" y="400" font-family="Unifont" font-size="50px" fill="#202020">Official Colors:</text>
+</svg>
