@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1000mm" height="1000mm" viewBox="0 0 1000 1000">
-    <text x="50" y="100" font-family="Minecraft" font-size="50px" fill="#202020">
-        chrissx Media
-        <text font-family="Unifont">Corporate Style 2.2rc0</text>
-    </text>
-    <text x="50" y="200" font-family="Unifont" font-size="50px" fill="#202020">Fonts:</text>
-    <text x="200" y="250" font-family="Unifont" font-size="50px" fill="#202020">GNU Unifont</text>
-    <text x="200" y="300" font-family="Minecraft" font-size="50px" fill="#202020">Minecraft</text>
-    <text x="50" y="400" font-family="Unifont" font-size="50px" fill="#202020">Official Colors:</text>
+<rect width="100%" height="100%" fill="#ffffff" />
+<text x="46.875" y="84.375" font-family="Minecraft" font-size="50px" fill="#202020">chrissx Media
+<text font-family="Unifont">Corporate Style 2.2rc1</text>
+</text>
+<text x="46.875" y="184.375" font-family="Unifont" font-size="50px" fill="#202020">Fonts:</text>
+<text x="196.875" y="234.375" font-family="Unifont" font-size="50px" fill="#202020">GNU Unifont</text>
+<text x="196.875" y="284.375" font-family="Minecraft" font-size="50px" fill="#202020">Minecraft</text>
+<text x="46.875" y="384.375" font-family="Unifont" font-size="50px" fill="#202020">Official Colors:</text>
+<text x="196.875" y="434.375" font-family="Unifont" font-size="50px" fill="#C02020">CMRed</text>
+<text x="476.875" y="434.375" font-family="Unifont" font-size="50px" fill="#C02020">(#C02020)</text>
+<text x="196.875" y="484.375" font-family="Unifont" font-size="50px" fill="#8020F0">CMPurple</text>
+<text x="476.875" y="484.375" font-family="Unifont" font-size="50px" fill="#8020F0">(#8020F0)</text>
+<text x="196.875" y="534.375" font-family="Unifont" font-size="50px" fill="#202020">CMBlack</text>
+<text x="476.875" y="534.375" font-family="Unifont" font-size="50px" fill="#202020">(#202020)</text>
+<text x="196.875" y="584.375" font-family="Unifont" font-size="50px" fill="#000000">PitchBlack</text>
+<text x="476.875" y="584.375" font-family="Unifont" font-size="50px" fill="#000000">(#000000)</text>
+<text x="46.875" y="684.375" font-family="Unifont" font-size="50px" fill="#202020">Inofficial Colors:</text>
+<text x="196.875" y="734.375" font-family="Unifont" font-size="50px" fill="#60D0FF">TransBlue</text>
+<text x="476.875" y="734.375" font-family="Unifont" font-size="50px" fill="#60D0FF">(#60D0FF)</text>
+<text x="196.875" y="784.375" font-family="Unifont" font-size="50px" fill="#FFB0C0">TransPink</text>
+<text x="476.875" y="784.375" font-family="Unifont" font-size="50px" fill="#FFB0C0">(#FFB0C0)</text>
+<text x="245" y="950" font-family="Minecraft" font-size="225px" fill="#202020">c</text>
+<text x="445" y="950" font-family="Minecraft" font-size="225px" fill="#8020F0">c</text>
+<text x="645" y="950" font-family="Minecraft" font-size="225px" fill="#C02020">c</text>
 </svg>
