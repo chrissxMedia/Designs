@@ -9,7 +9,8 @@
 (defun svg-rect (&rest attrs) (format nil "<rect ~d />" (svg-attrs attrs)))
 
 (defun svg (width height &rest children)
-  (format nil "<?xml version=\"1.0\" encoding=\"UTF-8\"?>~%<svg width=\"~dmm\" height=\"~dmm\" viewBox=\"0 0 ~d ~d\">~%~d~%</svg>~%" width height width height (reduce (lambda (x y) (format nil "~d~%~d" x y)) children)))
+  (format nil "<?xml version=\"1.0\" encoding=\"UTF-8\"?>~%<svg width=\"~dmm\" height=\"~dmm\" viewBox=\"0 0 ~d ~d\">~%  ~d~%</svg>~%"
+          width height width height (reduce (lambda (x y) (format nil "~d~%  ~d" x y)) children)))
 
 ;; For some reason no kind of anchor attributes seems to put the text at the
 ;; correct coordinates, so we have to subtract (3.125,-34.375)
@@ -21,7 +22,7 @@
 (defun background (color) (svg-rect (cons :w "100%") (cons :h "100%") (cons :color color)))
 (defun small-text (font text) (svg-el "text" text (cons :font font)))
 (defun normal (y text) (unifont 50 y "#202020" text))
-(defun cmcolor (y name color) (format nil "~d~%~d" (unifont 200 y color name) (unifont 480 y color (format nil "(~d)" color))))
+(defun cmcolor (y name color) (format nil "~d~%  ~d" (unifont 200 y color name) (unifont 480 y color (format nil "(~d)" color))))
 (defun cmlogo (x color)
   (svg-el "text" "c" (cons :x x) (cons :y 950) (cons :font "Minecraft") (cons :font-size "225px") (cons :color color)))
 
@@ -30,7 +31,8 @@
                         :if-exists :supersede
                         :if-does-not-exist :create)
   (format stream (svg 1000 1000 (background "#ffffff")
-                                (minecraft 50 50 "#202020" (format nil "~%chrissx Media~%~d~%" (small-text "Unifont" "Corporate Style 2.2rc2")))
+                                (minecraft 50 50 "#202020"
+                                           (format nil "~%    chrissx Media ~d~%  " (small-text "Unifont" "Corporate Style 2.2rc3")))
                                 (normal 150 "Fonts:")
                                 (unifont 200 200 "#202020" "GNU Unifont")
                                 (minecraft 200 250 "#202020" "Minecraft")
