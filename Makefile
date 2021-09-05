@@ -9,4 +9,7 @@ cm_style.png: cm_style.svg
 cm_style.svg: make_cm_style.cl
 	$(CLISP) make_cm_style.cl
 
-.PHONY: all
+clean:
+	rm -f cm_style.png cm_style.svg
+
+.PHONY: all clean
