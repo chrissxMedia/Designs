@@ -22,3 +22,9 @@
 (defun svg (width height &rest children)
   (format nil "<?xml version=\"1.0\" encoding=\"UTF-8\"?>~%<svg width=\"~dmm\" height=\"~dmm\" viewBox=\"0 0 ~d ~d\">~%  ~d~%</svg>~%"
           width height width height (reduce (lambda (x y) (format nil "~d~%  ~d" x y)) children)))
+
+(defun write (path &rest args)
+  (with-open-file (stream path :direction :output
+                               :if-exists :supersede
+                               :if-does-not-exist :create)
+    (format stream (apply svg args))))
