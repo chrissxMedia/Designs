@@ -1,13 +1,13 @@
-CLISP ?= clisp
+CL ?= sbcl --script
 INKSCAPE ?= inkscape -o
 
-all: cm_style.png
+all: cm_style.png cm_style.svg
 
 %.png: %.svg
 	$(INKSCAPE) $@ $<
 
 %.svg: %.cl svg.cl
-	$(CLISP) $<
+	$(CL) $<
 
 clean:
 	rm -f cm_style.png cm_style.svg
