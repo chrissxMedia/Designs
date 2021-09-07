@@ -3,11 +3,11 @@ INKSCAPE ?= inkscape -o
 
 all: cm_style.png
 
-cm_style.png: cm_style.svg
-	$(INKSCAPE) cm_style.png cm_style.svg
+%.png: %.svg
+	$(INKSCAPE) $@ $<
 
-cm_style.svg: make_cm_style.cl
-	$(CLISP) make_cm_style.cl
+%.svg: %.cl svg.cl
+	$(CLISP) $<
 
 clean:
 	rm -f cm_style.png cm_style.svg
