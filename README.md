@@ -4,12 +4,13 @@ Many designs from chrissx Media and resources for those.
 ## Dependencies
 For rebuilding all of the logos you need the following software packages:
 - `make`
-- `clisp` (or another Common Lisp implementation)
-- `inkscape` (pre-1.0 versions need custom hacks)
-- `gimp`
-Additionally you need the following fonts:
-- `Unifont`
-- `Minecraft`
+- An ANSI Common Lisp implementation (`sbcl` is used by default)
+- Inkscape (pre-1.0 versions need custom hacks)
+- GIMP
+
+Additionally you need our official fonts:
+- [Unifont](http://www.unifoundry.com/unifont/index.html)
+- Minecraft (an official source is to be determined)
 
 ## A Note on GIMP Scripting
 Scripting GIMP is horribly broken (at least on macOS), but thankfully you can use `xcftools`:
@@ -28,6 +29,5 @@ Then open up all the GIMP files and export them.
 Running `make` might require custom configuration, like with `inkscape` < 1.0:
 `INKSCAPE="inkscape -e" make`
 
-or with other Common Lisp runtimes:
-
-`CLISP="sbcl --script" make`
+Or with other Common Lisp runtimes:
+`CL=clisp make`
