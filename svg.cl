@@ -5,9 +5,10 @@
   (format nil "~d=\"~d\""
           (cdar (remove-if-not (lambda (x) (equal (car x) key))
                               '((:x . "x") (:y . "y") (:font . "font-family") (:font-size . "font-size")
-                                           (:w . "width") (:h . "height") (:color . "fill")
+                                           (:w . "width") (:h . "height") (:d . "d") (:color . "fill")
                                            (:font-weight . "font-weight") (:text-align . "text-align")
-                                           (:text-anchor . "text-anchor"))))
+                                           (:text-anchor . "text-anchor") (:id . "id") (:style . "style")
+                                           (:stroke . "stroke") (:stroke-width . "stroke-width"))))
           value))
 (defun attrs (as) (format nil " ~d" (reduce (lambda (x y) (format nil "~d ~d" x y))
                                             (map 'list (lambda (x) (attr (car x) (cdr x))) as))))
@@ -18,6 +19,7 @@
 ; TODO: figure out a way to do this nicely
 (defun text (&rest args) (apply #'-long-el (cons "text" args)))
 (defun rect (&rest args) (apply #'-os-el (cons "rect" args)))
+(defun path (d &rest args) (apply #'-os-el (cons "path" (cons (cons :d d) args))))
 
 (defun svg (width height &rest children)
   (format nil "<?xml version=\"1.0\" encoding=\"UTF-8\"?>~%<svg width=\"~dmm\" height=\"~dmm\" viewBox=\"0 0 ~d ~d\">~%  ~d~%</svg>~%"
