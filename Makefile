@@ -1,15 +1,18 @@
-CL ?= sbcl --script
-INKSCAPE ?= inkscape -o
+INKSCAPE ?= inkscape -d 384 -o
 
-all: cm_style.png cm_style.svg btw_i_use_amplos.svg btw_i_use_amplos.png
+SLIM = $(wildcard *.slim)
+SVG = $(SLIM:.slim=.svg)
+PNG = $(SLIM:.slim=.png)
+
+all: $(SVG) $(PNG)
 
 %.png: %.svg
 	$(INKSCAPE) $@ $<
 
-%.svg: %.cl svg.cl
-	$(CL) $<
+%.svg: %.slim
+	slimrb $< $@
 
 clean:
-	rm -f cm_style.png cm_style.svg
+	rm -f $(SVG) $(PNG)
 
 .PHONY: all clean
