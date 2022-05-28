@@ -1,6 +1,6 @@
 INKSCAPE ?= inkscape -d 384 -o
 
-SLIM = $(wildcard *.slim)
+SLIM = $(wildcard *.slim) $(wildcard */*.slim) $(wildcard */*/*.slim)
 SVG = $(SLIM:.slim=.svg)
 PNG = $(SLIM:.slim=.png)
 
