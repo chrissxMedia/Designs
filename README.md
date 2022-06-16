@@ -25,6 +25,10 @@ files and export them.
 Running `make` might require custom configuration, like with `inkscape` < 1.0:
 `INKSCAPE="inkscape -d 384 -e" make`
 
+## Style guide
+
+![](cm_style.svg)
+
 ## A Rant about GIMP Scripting
 
 Scripting GIMP is horribly broken (at least on macOS), but thankfully you can
