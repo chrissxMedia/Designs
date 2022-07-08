@@ -19,11 +19,12 @@ Additionally you need our official fonts:
 
 ## Building
 
-Remove the old build files and run `make -j$(nproc)`. Then open up all the GIMP
-files and export them.
+Remove the old build files and run
+`flags/csv2slim.py flags < flags/flags.csv && make -j$(nproc)`. Then open up all
+the GIMP files and export them.
 
 Running `make` might require custom configuration, like with `inkscape` < 1.0:
-`INKSCAPE="inkscape -d 384 -e" make`
+`INKSCAPE="inkscape -d 384 -e" make -j$(nproc)`
 
 ## Style guide
 
